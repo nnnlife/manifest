@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <remote name="github" fetch="." />
+    <retmoe name="aosp"
+        fetch="../android" />
+    <remote name="x86"
+        fetch="../android-x86" />
+    <default revision="refs/tag/android-7.1.1_r4" remote="aosp" sync-c="true" sync-j="4" />
+
+    <!-- android-x86 -->
+    <project path="bootable/newinstaller" name="platform/bootable/newinstaller" remote="x86" revision="nuget-x86" />
+
+    <!-- AOSP -->
+    <project path="build" name="platform/build" groups="pdk" >
+        <copyfile src="core/root.mk" dest="Makefile" />
+    </project>
+</manifest>
