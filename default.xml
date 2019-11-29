@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-    <remote name="github" fetch="." />
-    <remote name="aosp"
-            fetch="../android" />
-    <remote name="x86"
-            fetch="../android-x86" />
-    <default revision="refs/tag/android-7.1.1_r4" remote="aosp" sync-c="true" sync-j="4" />
+    <remote name="github" fetch="https://github.com/nnnlife" />
+    <remote name="internal" fetch="ssh://10.158.4.192:/home/users/yongwoo1.park/daemon.git" />
+    <default revision="refs/heads/master" remote="internal" sync-j="4" />
 
-    <!-- android-x86 -->
-    <project path="bootable/newinstaller" name="platform/bootable/newinstaller" remote="x86" revision="nuget-x86" />
+    <!-- github -->
+    <project path="drama" name="dramascript" remote="github" revision="refs/heads/new_year" />
 
-    <!-- AOSP -->
-    <project path="build" name="platform/build" groups="pdk" >
-        <copyfile src="core/root.mk" dest="Makefile" />
-    </project>
+    <!-- internal -->
+    <project path="daemon" name="daemon.git" />
 </manifest>
