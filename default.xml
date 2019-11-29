@@ -5,7 +5,7 @@
     <default revision="refs/heads/master" remote="internal" sync-j="4" />
 
     <!-- github -->
-    <project path="drama" name="dramascript" remote="github" revision="refs/heads/new_year" />
+    <project groups='hobby', path="drama" name="dramascript" remote="github" revision="refs/heads/new_year" />
 
     <!-- internal -->
     <project path="daemon" name="daemon.git" />
